@@ -1,0 +1,27 @@
+<script>
+
+function vowelsAndConsonants(s) {
+    for(let i=0;i<(s.length-1);i++)
+    {
+        if (s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u')
+        {
+            console.log(s[i]);
+        }
+    }
+    
+    for(let i=0;i<(s.length-1);i++)
+    {
+        if (s[i]!=='a' && s[i]!=='e' && s[i]!=='i' && s[i]!=='o' && s[i]!=='u')
+        {
+            console.log(s[i]);
+        }
+    }
+}
+
+
+function main() {
+    const s = window.prompt("Enter your guess", "Number from 1 to 9");
+    
+    vowelsAndConsonants(s);
+}
+</script>

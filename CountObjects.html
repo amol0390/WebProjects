@@ -1,0 +1,60 @@
+<script>
+    'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.trim().split('\n').map(string => {
+        return string.trim();
+    });
+    
+    main();    
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+/*
+ * Return a count of the total number of objects 'o' satisfying o.x == o.y.
+ * 
+ * Parameter(s):
+ * objects: an array of objects with integer properties 'x' and 'y'
+ */
+function getCount(objects) {
+    var count;
+    const found = objects.find(item)
+    {
+        if (item.x == item.y)
+        {
+            count = count+1;
+
+        }
+        return count;
+    };
+
+    return found;   
+}
+
+
+function main() {
+    const n =  parseInt(window.prompt("Enter length of objects"));
+    let objects = [];
+    
+    for (let i = 0; i < n; i++) {
+        const [a, b] = window.prompt().split(' ');
+        
+        objects.push({x: +(a), y: +(b)});
+    }
+    
+    console.log(getCount(objects));
+}
+</script>

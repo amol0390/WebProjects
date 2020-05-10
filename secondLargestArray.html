@@ -1,0 +1,31 @@
+<script>
+    function getSecondLargest(nums) {
+        nums = nums.sort(function(a, b) {
+        return a - b;})
+        var seclarge = null;
+        var mx = Math.max(...nums);
+        var i = nums.length-1;
+        for(i; i>0 ;i--)
+        {
+            if((nums[i-1])!==mx)
+            {
+                seclarge = nums[i-1];
+                break;
+            }
+        }
+        if (seclarge == null) 
+        {
+            seclarge = nums[length-2];
+        }
+        return  seclarge;  
+
+}
+
+function main()
+{
+    const n = +window.prompt("Enter a number");
+    var nums = window.prompt().split(' ').map(Number);
+    // getSecondLargest(nums);
+    console.log(getSecondLargest(nums));
+}
+</script>

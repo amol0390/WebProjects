@@ -1,0 +1,31 @@
+<script>
+
+ 
+function reverseString(s) {
+    let charray =[];
+    let reversestr;
+    try
+    {
+     charray = s.split("");
+     charray.reverse();
+     reversestr = charray.join("");
+console.log (reversestr)
+       
+    }
+    catch(error){
+
+        console.log(error.message);
+        console.log(s);
+
+    }
+
+}
+
+
+function main() {
+    const s = window.prompt("Enter a String");
+    
+    reverseString(s);
+}
+ 
+    </script>
